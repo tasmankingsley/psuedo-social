@@ -18,7 +18,8 @@ let posts = [
 <template>
     <div class="feed-container" v-for="item in posts">
         <div class="post-div">
-            <span>@{{item.username}}</span>
+            <div class="profile"></div>
+            <span><b>{{item.username}}</b>@{{item.username}}</span>
             <span>{{item.content}}</span>
         </div>
 
@@ -31,6 +32,7 @@ let posts = [
     background-color: #000;
     border-left: #303443 1px solid;
     border-right: #303443 1px solid;
+    border-bottom: #303443 1px solid;
     height: 100%;
     width: 700px;
     text-align: center;
@@ -38,15 +40,21 @@ let posts = [
 }
 
 .post-div {
-    height: 200px;
+    height: auto;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    place-items: center;
-    border-bottom: #303443 1px solid;
+    display: grid;
+    grid-auto-flow: row;
+    text-align: left;
+    /* border-bottom: #303443 1px solid; */
     font-size: 1.2rem;
+    padding: 20px;
+}
 
+.profile {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
 }
 
 .ghost-div {

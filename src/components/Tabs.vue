@@ -4,6 +4,8 @@ import { store } from './store';
 function toggle_menu() {
     if (store.menu_width === 0){
         store.menu_width = 300;
+    } else {
+        store.menu_width = 0;
     }
 }
 </script>

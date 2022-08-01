@@ -12,7 +12,7 @@ function toggle_menu() {
 <transition>
     <div class="menu" v-if="store.menu_width === 300">
         <div class="menu_options">
-            <span @click="toggle_menu">x</span>
+            <!-- <span @click="toggle_menu">x</span> -->
             <span>Home</span>
             <span>Explore</span>
             <span>Notifications</span>
@@ -30,8 +30,9 @@ function toggle_menu() {
     background-color: #0c0c12;
     color: #3658a6;
     position: fixed;
-    width: 300px;
-    height: 100vh;
+    width: 369px;
+    height: 100%;
+    top: 50px;
     transition: width 0.3s;
     z-index: 3;
 }
