@@ -1,5 +1,5 @@
 import { reactive } from "vue";
 
 export let store = reactive({
-    menu_width: 0
+    menu_width: 300
 });
